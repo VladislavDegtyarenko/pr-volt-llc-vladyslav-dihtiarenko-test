@@ -1,0 +1,14 @@
+#root {
+  max-width: 30rem;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
