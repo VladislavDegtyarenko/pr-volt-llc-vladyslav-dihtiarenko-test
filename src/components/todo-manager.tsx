@@ -13,7 +13,7 @@ const TodoManager: FC = () => {
 
   if (hasAnyTodos) {
     return (
-      <div className="grid grid-rows-[auto_1fr] gap-4">
+      <div className="grid w-full grid-cols-[100%] grid-rows-[auto_1fr] gap-4">
         <TodoFilter />
         <TodoList />
       </div>

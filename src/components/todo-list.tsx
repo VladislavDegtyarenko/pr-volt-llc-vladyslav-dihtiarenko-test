@@ -16,9 +16,9 @@ const TodoList: FC = () => {
       : `No ${currentFilter} todos`
 
   return (
-    <div className="grid grid-rows-[auto_1fr] gap-1">
+    <div className="grid w-full grid-cols-[100%] grid-rows-[auto_1fr] gap-1">
       <div className="text-left text-xl capitalize">{todosHeading}</div>
-      <ul className="flex flex-col">
+      <ul className="flex w-full flex-col overflow-hidden">
         {filteredTodos.map(({ name, completed, id }) => {
           return <TodoCard key={id} id={id} name={name} completed={completed} />
         })}

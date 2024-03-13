@@ -21,19 +21,21 @@ const TodoCard: FC<TodoItem> = ({ id, name, completed }) => {
   }
 
   return (
-    <li className="flex w-full items-center gap-2">
+    <li className="flex w-full items-center justify-between gap-2">
       <label
-        className="group/label flex grow cursor-pointer items-center
-      gap-2 py-2"
+        className="group/label flex max-w-[calc(100%_-_2.5rem)]
+        grow cursor-pointer items-center
+        gap-2 py-2"
       >
         <Checkbox
           checked={completed}
           onCheckedChange={toggleCompleted}
-          className="opacity-70 transition-opacity
-          group-hover/label:opacity-85"
+          className="shrink-0 opacity-70
+          transition-opacity group-hover/label:opacity-85"
         />
         <span
-          className={`text-sm ${completed ? 'line-through opacity-70' : ''}`}
+          className={`overflow-hidden text-ellipsis 
+          text-left text-sm ${completed ? 'line-through opacity-70' : ''}`}
         >
           {name}
         </span>
@@ -41,7 +43,7 @@ const TodoCard: FC<TodoItem> = ({ id, name, completed }) => {
       <Button
         variant="ghost"
         size="icon"
-        className="h-8 w-8"
+        className="h-8 w-8 shrink-0"
         onClick={handleDelete}
       >
         <X size={14} strokeWidth={1.75} className="opacity-70" />
